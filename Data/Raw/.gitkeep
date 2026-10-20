@@ -1,0 +1,11 @@
+[project]
+name = "Desafio-taller-2"
+version = "0.1.0"
+description = ""
+requires-python = ">=3.13"
+
+dependencies = [
+    "request (>=2.34.2,<3.0.0)"
+    "beautifulsoup (>=4.15.0,<5.0.0)"
+    "pandas"
+]
