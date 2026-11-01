@@ -85,6 +85,19 @@ dataset["texto_limpio"] = dataset["text"].apply(limpiar_texto)
 tiene_texto = dataset["texto_limpio"] != ""
 dataset = dataset[tiene_texto]
 
+#rating
+rating = []
+
+for puntaje in dataset["label"]:
+    if puntaje >= 4:
+        rating.append("positive")
+    elif puntaje <= 2:
+        rating.append("negative")
+    else:
+        rating.append("neutral")
+
+dataset["rating"] = rating
+
 #guardar una copia limpia
 dataset.to_csv("Data/Preprocessed/dataset_limpio.csv", index=False)
 
