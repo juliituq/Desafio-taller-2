@@ -1,7 +1,7 @@
 import pandas as pd
 from gensim.models import Word2Vec
 
-dataset = pd.read_csv("Data/Preprocessed/dataset_limpio.csv")
+dataset = pd.read_csv("Data/Splits/train.csv")
 
 sentences = (dataset["texto_limpio"].str.split().tolist())
 
