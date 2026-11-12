@@ -89,9 +89,9 @@ dataset = dataset[tiene_texto]
 rating = []
 
 for puntaje in dataset["label"]:
-    if puntaje >= 4:
+    if puntaje >= 3:
         rating.append("positive")
-    elif puntaje <= 2:
+    elif puntaje <= 1:
         rating.append("negative")
     else:
         rating.append("neutral")
